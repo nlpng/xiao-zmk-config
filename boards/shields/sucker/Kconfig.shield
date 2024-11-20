@@ -1,5 +1,0 @@
-config SHIELD_SUCKER_RIGHT
-    def_bool $(shields_list_contains,sucker_right)
-
-config SHIELD_SUCKER_LEFT
-    def_bool $(shields_list_contains,sucker_left)

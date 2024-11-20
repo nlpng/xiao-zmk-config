@@ -1,7 +1,7 @@
 if SHIELD_SUCKER_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "sucker_right"
+    default "aibo_right"
 
 config ZMK_SPLIT
     default y
@@ -14,7 +14,7 @@ endif
 if SHIELD_SUCKER_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "sucker_left"
+    default "aibo_left"
 
 config ZMK_SPLIT
     default y
