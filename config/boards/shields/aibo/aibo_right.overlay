@@ -1,4 +1,4 @@
-#include "sucker.dtsi"
+#include "aibo.dtsi"
 
 &default_transform {
     col-offset = <6>;
