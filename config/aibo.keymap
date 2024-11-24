@@ -25,6 +25,15 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5  // right hand
 #define KEYS_T LH2 LH1 LH0 RH0 RH1                                                  // thumbs
 
+&mt {
+    flavor = "hold-preferred";
+    tapping-term-ms = <150>;
+};
+
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <150>;
+};
 
 / {
         behaviors {
@@ -80,10 +89,10 @@
 // |  Z  |  X  |  C  |  V  |  B  |  _  |   |  "  |  N   |  M  |  <  |  >  |  ?  |
 // |  -  |  =  |  +  | TAB |SPACE| ALT |   | RET | BSPC |                 |  \  |
                         bindings = <
-   &kp Q     &kp W          &kp E           &kp R           &kp T                                    &kp Y    &kp U           &kp I           &kp O          &kp P
-   &kp A     &hml LALT S    &hml LCTRL D    &hml LSHFT F    &kp G          &kp ESC     &kp GRAVE     &kp H    &hmr LSHFT J    &hmr LCTRL K    &hmr LALT L    &kp SEMI
-   &kp Z     &kp X          &kp C           &kp V           &kp B          &kp UNDER   &kp SQT       &kp N    &kp M           &kp COMMA       &kp DOT        &kp FSLH
-   &kp MINUS &kp EQUAL      &kp PLUS        &kp TAB         &lt NAV SPACE  &kp LALT    &lt SYMBO RET &kp BSPC                                                &kp BSLH
+   &kp Q     &kp W          &kp E           &kp R           &kp T                                        &kp Y    &kp U           &kp I           &kp O          &kp P
+   &kp A     &hml LALT S    &hml LCTRL D    &hml LSHFT F    &kp G          &kp ESC         &kp GRAVE     &kp H    &hmr LSHFT J    &hmr LCTRL K    &hmr LALT L    &kp SEMI
+   &kp Z     &kp X          &kp C           &kp V           &kp B          &kp UNDER       &kp SQT       &kp N    &kp M           &kp COMMA       &kp DOT        &kp FSLH
+   &kp MINUS &kp EQUAL      &kp PLUS        &kp TAB         &lt NAV SPACE  &mt LALT DEL    &lt SYMBO RET &kp BSPC                                                &kp BSLH
                         >;
                 };
                 nav_layer {
