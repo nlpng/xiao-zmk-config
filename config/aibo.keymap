@@ -75,12 +75,12 @@
 // -----------------------------------------------------------------------------------------
 // |  Q  |  W  |  E  |  R  |  T  |               |  Y   |  U  |  I  |  O  |  P  |
 // |  A  |  S  |  D  |  F  |  G  | ESC |   |  ~  |  H   |  J  |  K  |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |  B  | ESC |   |  "  |  N   |  M  |  <  |  >  |  ?  |
+// |  Z  |  X  |  C  |  V  |  B  |  _  |   |  "  |  N   |  M  |  <  |  >  |  ?  |
 // |  -  |  =  |  +  | TAB |SPACE| ALT |   | RET | BSPC |                 |  \  |
                         bindings = <
    &kp Q     &kp W          &kp E           &kp R           &kp T                                    &kp Y    &kp U           &kp I           &kp O          &kp P
    &kp A     &hml LALT S    &hml LCTRL D    &hml LSHFT F    &kp G          &kp ESC     &kp GRAVE     &kp H    &hmr LSHFT J    &hmr LCTRL K    &hmr LALT L    &kp SEMI
-   &kp Z     &kp X          &kp C           &kp V           &kp B          &kp ESC     &kp SQT       &kp N    &kp M           &kp COMMA       &kp DOT        &kp FSLH
+   &kp Z     &kp X          &kp C           &kp V           &kp B          &kp UNDER   &kp SQT       &kp N    &kp M           &kp COMMA       &kp DOT        &kp FSLH
    &kp MINUS &kp EQUAL      &kp PLUS        &kp TAB         &lt NUM SPACE  &kp LALT    &lt NAV RET   &kp BSPC                                                &kp BSLH
                         >;
                 };
@@ -88,8 +88,8 @@
 // -----------------------------------------------------------------------------------------
 // |  1  |  2  |  3  |  4  |  5  |               |  6   |  7  |  8  |  9  |  0  |
 // |     |     |     |     |     |     |   |     | LFT  | DWN |  UP | RGT |     |
-// | UNDO| CUT |COPY |PASTE|     |     |   |     |      |     |     |     |     |
-// |     |     |     |     |     |     |   |SPACE| BSPC |                 |     |
+// |     | CUT |COPY |PASTE|     |     |   |     |      |     |     |     |     |
+// |     |     |     |     |     |     |   | RET | BSPC |                 |     |
                         bindings = <
    &kp N1      &kp N2    &kp N3      &kp N4      &kp N5                        &kp N6    &kp N7    &kp N8  &kp N9    &kp N0
    &trans      &trans    &trans      &trans      &trans    &trans    &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT &trans
