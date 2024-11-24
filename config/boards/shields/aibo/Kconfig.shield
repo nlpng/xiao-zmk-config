@@ -1,5 +1,5 @@
-config SHIELD_SUCKER_RIGHT
+config SHIELD_AIBO_RIGHT
     def_bool $(shields_list_contains,aibo_right)
 
-config SHIELD_SUCKER_LEFT
+config SHIELD_AIBO_LEFT
     def_bool $(shields_list_contains,aibo_left)
