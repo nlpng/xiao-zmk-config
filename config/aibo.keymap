@@ -13,6 +13,7 @@
 #define NUM 1
 #define NAV 2
 #define MOUSE 3
+#define SCROLL 4
 
 #include "key_def/42.h"
 
@@ -112,7 +113,7 @@
                         >;
                 };
 
-                mouse_layer {
+                MOUSE {
 // -----------------------------------------------------------------------------------------
 // |     |     |     |     |     |               |      |      |      |      |     |
 // |     |     |     |     |     |     |   |     |      | LCLK | RCLK |      |     |
@@ -121,6 +122,20 @@
                         bindings = <
    &trans      &trans    &trans      &trans      &trans                        &trans      &trans      &trans       &trans      &trans
    &trans      &trans    &trans      &trans      &trans    &trans    &trans    &trans      &mkp MB1    &mkp MB2     &trans      &trans
+   &trans      &trans    &trans      &trans      &trans    &trans    &trans    &trans      &trans      &trans       &trans      &trans
+   &trans      &trans    &trans      &trans      &trans    &trans    &trans    &trans                                           &trans
+                        >;
+                };
+
+                SCROLL {
+// -----------------------------------------------------------------------------------------
+// |     |     |     |     |     |               |      |      |      |      |     |
+// |     |     |     |     |     |     |   |     |      |      |      |      |     |
+// |     |     |     |     |     |     |   |     |      |      |      |      |     |
+// |     |     |     |     |     |     |   |     |      |                    |     |
+                        bindings = <
+   &trans      &trans    &trans      &trans      &trans                        &trans      &trans      &trans       &trans      &trans
+   &trans      &trans    &trans      &trans      &trans    &trans    &trans    &trans      &trans      &trans       &trans      &trans
    &trans      &trans    &trans      &trans      &trans    &trans    &trans    &trans      &trans      &trans       &trans      &trans
    &trans      &trans    &trans      &trans      &trans    &trans    &trans    &trans                                           &trans
                         >;
