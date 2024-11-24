@@ -14,7 +14,7 @@
 #define NAV 2
 #define MOUSE 3
 
-#include "42.h"
+#include "key_def/42.h"
 
 /* Homerow mods */
 
