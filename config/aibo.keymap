@@ -10,8 +10,8 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define BASE 0
-#define NUM 1
-#define NAV 2
+#define NAV 1
+#define SYMBO 2
 #define MOUSE 3
 #define SCROLL 4
 
@@ -73,6 +73,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+                        display-name = "DEF"
 // -----------------------------------------------------------------------------------------
 // |  Q  |  W  |  E  |  R  |  T  |               |  Y   |  U  |  I  |  O  |  P  |
 // |  A  |  S  |  D  |  F  |  G  | ESC |   |  ~  |  H   |  J  |  K  |  L  |  ;  |
@@ -82,10 +83,11 @@
    &kp Q     &kp W          &kp E           &kp R           &kp T                                    &kp Y    &kp U           &kp I           &kp O          &kp P
    &kp A     &hml LALT S    &hml LCTRL D    &hml LSHFT F    &kp G          &kp ESC     &kp GRAVE     &kp H    &hmr LSHFT J    &hmr LCTRL K    &hmr LALT L    &kp SEMI
    &kp Z     &kp X          &kp C           &kp V           &kp B          &kp UNDER   &kp SQT       &kp N    &kp M           &kp COMMA       &kp DOT        &kp FSLH
-   &kp MINUS &kp EQUAL      &kp PLUS        &kp TAB         &lt NUM SPACE  &kp LALT    &lt NAV RET   &kp BSPC                                                &kp BSLH
+   &kp MINUS &kp EQUAL      &kp PLUS        &kp TAB         &lt NAV SPACE  &kp LALT    &lt SYMBO RET &kp BSPC                                                &kp BSLH
                         >;
                 };
-                num_layer {
+                nav_layer {
+                        dispaly-name = "NAV"
 // -----------------------------------------------------------------------------------------
 // |  1  |  2  |  3  |  4  |  5  |               |  6   |  7  |  8  |  9  |  0  |
 // |     |     |     |     |     |     |   |     | LFT  | DWN |  UP | RGT |     |
@@ -95,11 +97,12 @@
    &kp N1      &kp N2    &kp N3      &kp N4      &kp N5                        &kp N6    &kp N7    &kp N8  &kp N9    &kp N0
    &trans      &trans    &trans      &trans      &trans    &trans    &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT &trans
    &trans      &kp K_CUT &kp K_COPY  &kp K_PASTE &trans    &trans    &trans    &trans    &trans    &trans  &trans    &trans
-   &trans      &trans    &trans      &trans      &trans    &trans    &kp RET   &kp BSPC                              &trans
+   &trans      &trans    &trans      &trans      &trans    &trans    &trans    &trans                                &trans
                         >;
                 };
 
-                nav_layer {
+                symbol_layer {
+                        display-name = "SYM"
 // -----------------------------------------------------------------------------------------
 // |  !  |  @  |  #  |  $  |  %  |               |  ^   |  &  |  *  |  (  |  )  |
 // |     |     |     |     |     |     |   |     |      |     |     |  [  |  ]  |
@@ -109,11 +112,12 @@
    &kp EXCL    &kp AT    &kp HASH    &kp DLLR    &kp PRCNT                     &kp CARET   &kp AMPS    &kp ASTRK    &kp LPAR    &kp RPAR
    &trans      &trans    &trans      &trans      &trans    &trans    &trans    &trans      &trans      &trans       &kp LBKT    &kp RBKT
    &trans      &trans    &trans      &trans      &trans    &trans    &trans    &trans      &trans      &trans       &kp LBRC    &kp RBRC
-   &trans      &trans    &trans      &kp TAB     &trans    &kp LALT  &trans    &trans                                           &trans
+   &trans      &trans    &trans      &trans      &trans    &trans    &trans    &trans                                           &trans
                         >;
                 };
 
                 MOUSE {
+                        display-name = "MSE"
 // -----------------------------------------------------------------------------------------
 // |     |     |     |     |     |               |      |      |      |      |     |
 // |     |     |     |     |     |     |   |     |      | LCLK | RCLK |      |     |
@@ -128,6 +132,7 @@
                 };
 
                 SCROLL {
+                        display-name = "SCR"
 // -----------------------------------------------------------------------------------------
 // |     |     |     |     |     |               |      |      |      |      |     |
 // |     |     |     |     |     |     |   |     |      |      |      |      |     |
