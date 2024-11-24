@@ -12,6 +12,7 @@
 #define BASE 0
 #define NUM 1
 #define NAV 2
+#define MOUSE 3
 
 #include "42.h"
 
@@ -92,8 +93,8 @@
                         bindings = <
    &kp N1      &kp N2    &kp N3      &kp N4      &kp N5                        &kp N6    &kp N7    &kp N8  &kp N9    &kp N0
    &trans      &trans    &trans      &trans      &trans    &trans    &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT &trans
-   &kp K_UNDO  &kp K_CUT &kp K_COPY  &kp K_PASTE &trans    &trans    &trans    &trans    &trans    &trans  &trans    &trans
-   &trans      &trans    &trans      &trans      &trans    &trans    &kp SPACE &kp BSPC                              &trans
+   &trans      &kp K_CUT &kp K_COPY  &kp K_PASTE &trans    &trans    &trans    &trans    &trans    &trans  &trans    &trans
+   &trans      &trans    &trans      &trans      &trans    &trans    &kp RET   &kp BSPC                              &trans
                         >;
                 };
 
@@ -107,7 +108,21 @@
    &kp EXCL    &kp AT    &kp HASH    &kp DLLR    &kp PRCNT                     &kp CARET   &kp AMPS    &kp ASTRK    &kp LPAR    &kp RPAR
    &trans      &trans    &trans      &trans      &trans    &trans    &trans    &trans      &trans      &trans       &kp LBKT    &kp RBKT
    &trans      &trans    &trans      &trans      &trans    &trans    &trans    &trans      &trans      &trans       &kp LBRC    &kp RBRC
-   &trans      &trans    &trans      &kp TAB     &trans    &kp LALT  &trans    &kp BSPC                                         &trans
+   &trans      &trans    &trans      &kp TAB     &trans    &kp LALT  &trans    &trans                                           &trans
+                        >;
+                };
+
+                mouse_layer {
+// -----------------------------------------------------------------------------------------
+// |     |     |     |     |     |               |      |      |      |      |     |
+// |     |     |     |     |     |     |   |     |      | LCLK | RCLK |      |     |
+// |     |     |     |     |     |     |   |     |      |      |      |      |     |
+// |     |     |     |     |     |     |   |     |      |                    |     |
+                        bindings = <
+   &trans      &trans    &trans      &trans      &trans                        &trans      &trans      &trans       &trans      &trans
+   &trans      &trans    &trans      &trans      &trans    &trans    &trans    &trans      &mkp MB1    &mkp MB2     &trans      &trans
+   &trans      &trans    &trans      &trans      &trans    &trans    &trans    &trans      &trans      &trans       &trans      &trans
+   &trans      &trans    &trans      &trans      &trans    &trans    &trans    &trans                                           &trans
                         >;
                 };
         };
